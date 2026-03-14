@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Τζέρι — KINISI Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --black: #0d0d0d; --white: #f5f2eb; --cream: #ede9df;
+      --accent: #c8402a; --gold: #b8934a; --gray: #5a5a5a;
+    }
+    body { background: var(--white); color: var(--black); font-family: 'DM Sans', sans-serif; }
+    nav {
+      background: var(--black); padding: 1.2rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--white); letter-spacing: 0.1em; }
+    .nav-logo span { color: var(--accent); }
+    .nav-back { color: rgba(245,242,235,0.6); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .nav-back:hover { color: var(--accent); }
+
+    .hero {
+      background: var(--black);
+      padding: 5rem 2rem 3rem;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: 'ΤΖΕΡΙ';
+      position: absolute; font-family: 'Bebas Neue', sans-serif;
+      font-size: 25vw; color: rgba(255,255,255,0.03);
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      pointer-events: none; white-space: nowrap;
+    }
+    .article-cat {
+      display: inline-block; font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--accent); border: 1px solid var(--accent);
+      padding: 0.3rem 0.9rem; margin-bottom: 1.5rem;
+    }
+    .article-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 10vw, 7rem);
+      color: var(--white); letter-spacing: 0.04em;
+      line-height: 1; margin-bottom: 1.2rem;
+    }
+    .article-title em { font-family: 'Playfair Display', serif; color: var(--gold); font-style: italic; }
+    .article-meta { font-size: 0.78rem; color: rgba(245,242,235,0.4); letter-spacing: 0.08em; }
+
+    .article-body {
+      max-width: 720px; margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .cat-photo {
+      width: 100%; max-width: 600px;
+      display: block; margin: 0 auto 3rem;
+      border: 4px solid var(--gold);
+    }
+
+    .lead {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; line-height: 1.7;
+      color: var(--black); margin-bottom: 2.5rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 1.5rem;
+    }
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem; letter-spacing: 0.06em;
+      margin: 2.5rem 0 1rem; color: var(--black);
+    }
+    h2 span { color: var(--accent); }
+    p { font-size: 1rem; font-weight: 300; line-height: 1.85; color: #333; margin-bottom: 1.2rem; }
+
+    .fact-box {
+      background: var(--cream); padding: 2rem;
+      margin: 2.5rem 0;
+      border-top: 3px solid var(--gold);
+    }
+    .fact-box-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem; color: var(--gold);
+      letter-spacing: 0.1em; margin-bottom: 1rem;
+    }
+    .fact-box ul { list-style: none; }
+    .fact-box ul li {
+      font-size: 0.95rem; font-weight: 300;
+      color: var(--gray); padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+    .fact-box ul li:last-child { border: none; }
+    .fact-box ul li strong { color: var(--black); }
+
+    .quote-block {
+      background: var(--black); padding: 2rem;
+      margin: 2.5rem 0; text-align: center;
+    }
+    .quote-block p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-style: italic;
+      color: var(--white); margin: 0;
+    }
+    .quote-block cite { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.1em; margin-top: 0.8rem; display: block; }
+
+    footer {
+      background: var(--black); padding: 2rem;
+      text-align: center;
+      font-size: 0.75rem; color: rgba(245,242,235,0.3);
+    }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--white); margin-bottom: 0.5rem; }
+    .footer-logo span { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">KIN<span>I</span>SI</div>
+  <a href="index.html" class="nav-back">← Πίσω στο Blog</a>
+</nav>
+
+<div class="hero">
+  <div class="article-cat">Lifestyle & Κατοικίδια</div>
+  <h1 class="article-title">ΤΖΕΡΙ<br/><em>Ο Βασιλιάς</em></h1>
+  <div class="article-meta">14 Μαρτίου 2026 · 2 λεπτά ανάγνωση</div>
+</div>
+
+<div class="article-body">
+
+  <img src="Tzeri.jpg" alt="Τζέρι ο γάτος" class="cat-photo"/>
+
+  <p class="lead">Υπάρχουν γάτες. Και μετά υπάρχει ο Τζέρι. Ένα πορτοκαλί θηρίο χαλαρότητας, αξιοπρέπειας και απόλυτης κυριαρχίας επί του καναπέ.</p>
+
+  <h2>Ποιος <span>Είναι</span> ο Τζέρι;</h2>
+  <p>Ο Τζέρι δεν είναι απλώς ένας γάτος. Είναι φιλοσοφία ζωής. Ξαπλωμένος στο αγαπημένο του κρεβατάκι, με το ένα πόδι να κρέμεται με απόλυτη χαλαρότητα, στέλνει ένα μήνυμα στον κόσμο: <em>relax, όλα καλά.</em></p>
+
+  <p>Η πορτοκαλί γούνα του λάμπει σαν ηλιοβασίλεμα. Τα μάτια του κοιτάνε με εκείνη τη χαρακτηριστική έκφραση που λέει "σε βλέπω, αλλά δεν χρειάζεται να κουνηθώ".</p>
+
+  <div class="fact-box">
+    <div class="fact-box-title">📋 Ταυτότητα</div>
+    <ul>
+      <li><strong>Όνομα:</strong> Τζέρι</li>
+      <li><strong>Χρώμα:</strong> Πορτοκαλί tabby — αριστοκρατικό</li>
+      <li><strong>Αγαπημένη δραστηριότητα:</strong> Ξάπλωμα με στυλ</li>
+      <li><strong>Αγαπημένο μέρος:</strong> Το λευκό κρεβατάκι του</li>
+      <li><strong>Επάγγελμα:</strong> Full-time χαλάρωση</li>
+    </ul>
+  </div>
+
+  <h2>Η <span>Τέχνη</span> της Χαλάρωσης</h2>
+  <p>Αν υπάρχει κάτι που μπορούμε να μάθουμε από τον Τζέρι, αυτό είναι η τέχνη της χαλάρωσης. Ενώ εμείς τρέχουμε, αγχωνόμαστε και ανησυχούμε, ο Τζέρι έχει βρει τον τέλειο ρυθμό ζωής. Βρες το κρεβατάκι σου, ξαπλώσε άνετα και άσε ένα πόδι να κρέμεται ελεύθερα.</p>
+
+  <p>Οι επιστήμονες λένε ότι οι γάτες κοιμούνται 16 ώρες την ημέρα. Ο Τζέρι το θεωρεί αυτό ελάχιστο.</p>
+
+  <div class="quote-block">
+    <p>"Γιατί να τρέξεις όταν μπορείς να ξαπλώσεις;"</p>
+    <cite>— Τζέρι, φιλόσοφος</cite>
+  </div>
+
+  <h2>Το <span>Μυστικό</span> της Επιτυχίας</h2>
+  <p>Ο Τζέρι δεν ακολουθεί κανένα πρόγραμμα γυμναστικής, δεν μετράει θερμίδες και δεν ανησυχεί για deadlines. Κι όμως, είναι ένα από τα πιο happy και healthy πλάσματα που έχουμε δει. Ίσως έχει κάτι να μας διδάξει για τη ζωή.</p>
+
+  <p>Η ευτυχία δεν βρίσκεται στη βιασύνη. Βρίσκεται σε ένα ζεστό κρεβατάκι, σε ένα ήλιο που σε ζεσταίνει και σε ένα πόδι που κρέμεται ελεύθερα. Ευχαριστούμε Τζέρι. 🧡</p>
+
+</div>
+
+<footer>
+  <div class="footer-logo">KIN<span>I</span>SI</div>
+  <div>© 2026 KINISI Blog — Αφιερωμένο στον Τζέρι 🐱</div>
+</footer>
+
+</body>
+</html>
